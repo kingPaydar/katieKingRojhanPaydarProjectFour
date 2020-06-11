@@ -16,9 +16,91 @@
 // store specific items from API response into variables for use putting onto page
 // displays: pokemon image, name, height, weight, type
 
+const pokedexApp = {};
+
+let digits = [];  
+
+
+$('.btn0').on('click', function () {
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(0);
+})
+
+$('.btn1').on('click', function (){
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(1);
+})
+
+$('.btn2').on('click', function () {
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(2);
+})
+
+$('.btn3').on('click', function () {
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(3);
+})
+
+$('btn4').on('click', function () {
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(4);
+})
+
+$('.btn5').on('click', function () {
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(5);
+})
+
+$('.btn6').on('click', function () {
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(6);
+})
+
+$('.btn7').on('click', function () {
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(7);
+})
+
+$('.btn8').on('click', function () {
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(8);
+})
+
+$('.btn9').on('click', function () {
+    if (digits.length === 3) {
+        digits.shift();
+    }
+    digits.push(9);
+})
+
+// might use later 
+// $('.digitsDisplay').html(`
+//     <p>1${digits.join()}</p>
+//     <p>2${digits.join()}</p>
+//     <p>3${digits.join()}</p>
+//     `)
+
+
 $(document).ready(function() {
     
-    const pokedexApp = {};
     
     pokedexApp.url = `https://pokeapi.co/api/v2/pokemon/1/`;
     
@@ -37,6 +119,10 @@ $(document).ready(function() {
         console.log("didn't work")
     })
 
+
+
+
+
     // use variable to dive in for API data to access its images
 
     //       function listPokemon(pokemonNumber) {
@@ -49,14 +135,14 @@ $(document).ready(function() {
     // Darshana suggestion to go more in depth with our pseudocode
 
     // create a for loop to grab pokemon image
-}
+
 
 
     // make placeholder for pokeImage and use template literals to pull in sprites???????????
     
 
-    $('div').html();
 
-})
+
+});
 
 
