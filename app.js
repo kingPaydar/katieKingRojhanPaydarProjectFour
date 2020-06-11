@@ -17,84 +17,66 @@
 // displays: pokemon image, name, height, weight, type
 
 const pokedexApp = {};
+let pokemonId; 
 
 let digits = [];  
 
-
+// buttons for number pad 
 $('.btn0').on('click', function () {
-    if (digits.length === 3) {
-        digits.shift();
-    }
-    digits.push('0');
+    pushNumber('0');
 })
 
 $('.btn1').on('click', function (){
-    if (digits.length === 3) {
-        digits.shift();
-    }
-    digits.push('1');
+    pushNumber('1');
 })
 
 $('.btn2').on('click', function () {
-    if (digits.length === 3) {
-        digits.shift();
-    }
-    digits.push('2');
+    pushNumber('2');
 })
 
 $('.btn3').on('click', function () {
-    if (digits.length === 3) {
-        digits.shift();
-    }
-    digits.push('3');
+    pushNumber('3');
 })
 
 $('btn4').on('click', function () {
-    if (digits.length === 3) {
-        digits.shift();
-    }
-    digits.push('4');
+    pushNumber('4');
 })
 
 $('.btn5').on('click', function () {
-    if (digits.length === 3) {
-        digits.shift();
-    }
-    digits.push('5');
+    pushNumber('5');
 })
 
 $('.btn6').on('click', function () {
-    if (digits.length === 3) {
-        digits.shift();
-    }
-    digits.push('6');
+    pushNumber('6');
 })
 
 $('.btn7').on('click', function () {
-    if (digits.length === 3) {
-        digits.shift();
-    }
-    digits.push('7');
+    pushNumber('7');
 })
 
 $('.btn8').on('click', function () {
-    if (digits.length === 3) {
-        digits.shift();
-    }
-    digits.push('8');
+    pushNumber('8');
 })
 
 $('.btn9').on('click', function () {
+    pushNumber('9');
+})
+
+const pushNumber = function(number){
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push('9');
-})
+    digits.push(number);
+}
+
+// submit button concatenates array of string into single number
 
 $('input').on('click', function(){
-    let oneNumber = digits.join('');
-    console.log(oneNumber); 
-});
+    pokemonId = digits.join('');
+    // console.log(pokemonId); 
+    return pokemonId; 
+}); 
+
 
 // might use later 
 // $('.digitsDisplay').html(`
@@ -103,27 +85,40 @@ $('input').on('click', function(){
 //     <p>3${digits.join()}</p>
 //     `)
 
+pokedexApp.url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}/`;
+
+pokedexApp.grabPokemon = $.ajax({
+    url: pokedexApp.url,
+    method: "GET",
+    dataType: "JSON"
+});
 
 $(document).ready(function() {
     
     
-    pokedexApp.url = `https://pokeapi.co/api/v2/pokemon/1/`;
-    
-    pokedexApp.grabPokemon = $.ajax({
-        url: pokedexApp.url,
-        method: "GET",
-        dataType: "JSON"
-    });
 
-    console.log(pokedexApp.grabPokemon)
+    // console.log(pokedexApp.grabPokemon)
 
     pokedexApp.grabPokemon.then((result) => {
         console.log(result);
         pokedexApp.data = result;
-    }, (fail) => {
+     
+    }).fail(() => {
         console.log("didn't work")
-    })
 
+    });
+
+
+    //           function listPokemon(pokemonNumber) {
+    // return $.ajax({
+    //     url: `https://pokeapi.co/api/v2/pokemon/${pokemonNumber}/`,
+    //     dataType: 'json',
+    //     method: 'GET'
+    // })
+
+
+
+    
 
 
 
