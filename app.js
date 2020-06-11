@@ -25,71 +25,76 @@ $('.btn0').on('click', function () {
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(0);
+    digits.push('0');
 })
 
 $('.btn1').on('click', function (){
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(1);
+    digits.push('1');
 })
 
 $('.btn2').on('click', function () {
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(2);
+    digits.push('2');
 })
 
 $('.btn3').on('click', function () {
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(3);
+    digits.push('3');
 })
 
 $('btn4').on('click', function () {
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(4);
+    digits.push('4');
 })
 
 $('.btn5').on('click', function () {
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(5);
+    digits.push('5');
 })
 
 $('.btn6').on('click', function () {
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(6);
+    digits.push('6');
 })
 
 $('.btn7').on('click', function () {
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(7);
+    digits.push('7');
 })
 
 $('.btn8').on('click', function () {
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(8);
+    digits.push('8');
 })
 
 $('.btn9').on('click', function () {
     if (digits.length === 3) {
         digits.shift();
     }
-    digits.push(9);
+    digits.push('9');
 })
+
+$('input').on('click', function(){
+    let oneNumber = digits.join('');
+    console.log(oneNumber); 
+});
 
 // might use later 
 // $('.digitsDisplay').html(`
