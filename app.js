@@ -52,22 +52,24 @@ $(document).ready(function () {
         }
         digits.push(number);
     };
-    // submit button concatenates array of string into single number
+    // pokemonRequest takes the id and adds it to the end point
     const pokemonRequest = (id) => {
         console.log(id);
         return `https://pokeapi.co/api/v2/pokemon/${id}/`;
     };
-    
-    //   pokedexApp.url = pokemonRequest(pokemonId);
-    //   console.log(pokedexApp.url);
-    // might use later
-    // $('.digitsDisplay').html(`
-    //     <p>1${digits.join()}</p>
-    //     <p>2${digits.join()}</p>
-    //     <p>3${digits.join()}</p>
-    //     `)
 
-    $("input").on("click", function (event) {
+    // WE WILL WORK ON THIS SATURDAY --> WE NEED TO EXTRACT THE IMAGE FROM OUR API ONTO THE POKEDEX SCREEN! ********** 
+    $('.pokemonImage').html(`
+        <img src="${pokemonRequest.sprites}">
+        `)
+
+    $(".reset").on("click", function(event) {
+        digits.pop();
+        digits.pop();
+        digits.pop();
+    });
+
+    $(".enter").on("click", function (event) {
         // on next click on input clear out my returned pokemon array
         pokedexApp.pokemonStats = [];
         // build pokeUrl from pokemonRequqest function
