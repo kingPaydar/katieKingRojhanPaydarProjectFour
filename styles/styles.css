@@ -313,6 +313,17 @@ section {
   width: 80px;
   border-radius: 50%;
   background-color: #135dff;
+  border: 2px solid white;
+}
+
+.highlight {
+  height: 30px;
+  width: 45px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: rgba(255, 255, 255, 0.507);
+  border-radius: 50%;
 }
 
 .pokedexExternalScreen {
@@ -343,22 +354,53 @@ section {
   width: 5%;
   background-color: #c00d0d;
   border: 5px solid #790808;
+  -webkit-box-shadow: -4px 8px 1px 3px #790808;
+          box-shadow: -4px 8px 1px 3px #790808;
 }
 
 .pokedexCover {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 45%;
   height: 400px;
   background-color: #c00d0d;
   border: 5px solid #790808;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  border-left: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  -webkit-box-shadow: 0px 8px 1px 3px #790808;
+          box-shadow: 0px 8px 1px 3px #790808;
+}
+
+.pokedexCoverWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  margin: 0 auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 button {
   background-color: blue;
   border: 2px solid black;
-  width: 100px;
-  height: 100px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  padding: 5%;
 }
 
 .numberPad {
@@ -367,21 +409,19 @@ button {
 }
 
 .digitsDisplay {
-  height: 200px;
-  width: 200px;
-  background-color: rebeccapurple;
-}
-
-.numSlot1,
-.numSlot2,
-.numSlot3 {
-  border: 2px solid black;
-  height: 20px;
-  width: 20px;
+  width: 100%;
+  background-color: black;
+  border-radius: 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
 }
 
 input {
-  width: 200px;
-  height: 100px;
+  width: 50%;
+  padding: 2%;
   background-color: green;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }

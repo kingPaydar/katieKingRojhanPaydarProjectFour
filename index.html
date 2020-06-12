@@ -10,11 +10,15 @@
 
     <main>
         <section class="wrapper">
+            <h1>POKEDEX</h1>
+            <h2>click here for instructions</h2>
         <!-- inspired by toucan toco -->
         <div class="flexContainer">
             <div class="pokedexBase flexContainer">
                 <div class="pokedexTop">
-                    <div class="blueCircle"></div>
+                    <div class="blueCircle">
+                        <div class="highlight"></div>
+                    </div>
                 </div>
                 <div class="pokedexExternalScreen">
                     <div class="pokedexInternalScreen"></div>
@@ -22,9 +26,13 @@
                 <div class="pokedexInfo"></div>
             </div>
             <div class="hinge"></div>
-            <div class="pokedexCover">
+            <div class="pokedexCover flexContainer">
+                <!-- wrapper for pokedex cover content -->
+                <div class="pokedexCoverWrapper">
+                <!-- number display -->
+                <div class="digitsDisplay"></div>
+                <!-- number pad -->
                 <div class="flexContainer numberPad">
-                    <!-- number pad -->
                     <button class="btn0">0</button>
                     <button class="btn1">1</button>
                     <button class="btn2">2</button>
@@ -35,14 +43,12 @@
                     <button class="btn7">7</button>
                     <button class="btn8">8</button>
                     <button class="btn9">9</button>
-                    <!-- enter button -->
-                    <input type ="submit" value="ENTER">
                 </div>
-            <!-- number display -->
-            <div class="digitsDisplay">
-                <div class="numSlot1"></div>
-                <div class="numSlot2"></div>
-                <div class="numSlot3"></div>
+                <!-- enter button -->
+                <div class="flexContainer">
+                    <input type ="submit" value="ENTER">
+                    <input type="submit" value="CLEAR">
+                </div>
                 </div>
             </div>
         </section>
