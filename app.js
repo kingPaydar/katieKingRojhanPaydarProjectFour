@@ -60,8 +60,9 @@ $(document).ready(function () {
 
     // WE WILL WORK ON THIS SATURDAY --> WE NEED TO EXTRACT THE IMAGE FROM OUR API ONTO THE POKEDEX SCREEN! ********** 
     $('.pokemonImage').html(`
-        <img src="${pokemonRequest.sprites}">
+        <img src="${pokemonId.sprites.front_default}">
         `)
+      
 
     $(".reset").on("click", function(event) {
         digits.pop();

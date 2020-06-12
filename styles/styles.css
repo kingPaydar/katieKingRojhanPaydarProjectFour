@@ -281,7 +281,8 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #c00d0d;
+  background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(20%, #c00d0d));
+  background: linear-gradient(to left, #790808 0%, #c00d0d 20%);
   height: 500px;
   width: 45%;
   border-top-left-radius: 30px;
@@ -312,7 +313,8 @@ section {
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  background-color: #135dff;
+  background: -webkit-gradient(linear, left top, right top, from(#0032d6), color-stop(60%, #135dff));
+  background: linear-gradient(to right, #0032d6, #135dff 60%);
   border: 2px solid white;
 }
 
@@ -329,7 +331,7 @@ section {
 .pokedexExternalScreen {
   width: 80%;
   height: 200px;
-  background-color: silver;
+  background-color: #ececec;
   border-radius: 15px;
   border: 1px solid black;
   padding: 5%;
@@ -353,9 +355,9 @@ section {
 .hinge {
   width: 5%;
   background-color: #c00d0d;
-  border: 5px solid #790808;
-  -webkit-box-shadow: -4px 8px 1px 3px #790808;
-          box-shadow: -4px 8px 1px 3px #790808;
+  border: 2px solid #790808;
+  -webkit-box-shadow: -4px 8px 1px 3px #7d0808;
+          box-shadow: -4px 8px 1px 3px #7d0808;
 }
 
 .pokedexCover {
@@ -395,8 +397,9 @@ section {
 }
 
 button {
-  background-color: blue;
-  border: 2px solid black;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #8DC5CB), color-stop(30%, #2E94B5));
+  background: linear-gradient(to right, #8DC5CB 10%, #2E94B5 30%);
+  border: 2px solid #003A4C;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20%;
           flex: 1 1 20%;
@@ -420,7 +423,7 @@ button {
 input {
   width: 50%;
   padding: 2%;
-  background-color: green;
+  background-color: #8abb17;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;

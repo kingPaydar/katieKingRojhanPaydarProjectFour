@@ -11,7 +11,7 @@ section {
 
 .pokedexBase { 
   flex-direction: column;
-  background-color: $mainColor;
+  background: linear-gradient(to left, $accentColor 0%, $mainColor 20%);
   height: 500px;
   width: 45%;
   border-top-left-radius: 30px;
@@ -37,7 +37,7 @@ section {
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  background-color: $circleColor;
+  background: (linear-gradient(to right, rgb(0, 50, 214), #135dff 60%));
   border: 2px solid white; 
 }
 
@@ -54,7 +54,7 @@ section {
 .pokedexExternalScreen {
   width: 80%; 
   height: 200px; 
-  background-color: rgb(192, 192, 192);
+  background-color: #ececec;
   border-radius: 15px;
   border: 1px solid black;
   padding: 5%; 
@@ -78,8 +78,8 @@ section {
 .hinge {
   width: 5%; 
   background-color: $mainColor;
-  border: 5px solid $accentColor;
-  box-shadow: -4px 8px 1px 3px $accentColor;
+  border: 2px solid #790808;
+  box-shadow: -4px 8px 1px 3px #7d0808;
 
 }
 // NEED TO CREATE HINGE BOXES?!?! x 3 !!
@@ -109,8 +109,8 @@ section {
 // pokedex number pad v 
 
 button {
-  background-color: blue;
-  border: 2px solid black; 
+  background: linear-gradient(to right, #8DC5CB 10%, #2E94B5 30% );
+  border: 2px solid #003A4C; 
   flex: 1 1 20%;
   padding: 5%; 
 }
@@ -130,7 +130,7 @@ button {
 input {
   width: 50%;
   padding: 2%; 
-  background-color: green;
+  background-color: #8abb17;
   flex: 1 1 auto;
 }
 
