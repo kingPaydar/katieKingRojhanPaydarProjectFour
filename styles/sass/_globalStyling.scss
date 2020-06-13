@@ -96,6 +96,7 @@
   margin-bottom: 10%; 
   border-radius: 15px; 
   color: white;
+  @include fontSize (15);
 }
 
 // .pokedexInfoText {
@@ -135,7 +136,7 @@
 }
 
 .pokedexCoverCornerTurn {
-    width: 19%;
+  width: 19%;
   height: 100px;
   background-color: #c00d0d;
   position: absolute;
@@ -198,12 +199,25 @@ input:hover {
 }
 
 .digitsDisplay {
+  display: flex;
   width: 100%; 
+  justify-content: space-evenly;
+  align-items: center;
   background-color: black;
   border-radius: 15px;
   flex: 0 1 20%;
+  color: white;
+  @include fontSize (18);
 }
 
+.digitLeft,
+.digitCenter,
+.digitRight {
+  height: 30px;
+  flex: 0 1 20%;
+  border-bottom: 2px solid gray;
+  text-align: center;
+}
 
 input {
   width: 50%;

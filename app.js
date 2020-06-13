@@ -13,6 +13,12 @@
 const pokedexApp = {};
 pokedexApp.pokemonId = 0;
 let digits = [];
+
+// initialize text for digit divs
+$('.digitLeft').text(0);
+$('.digitCenter').text(0);
+$('.digitRight').text(0);
+
 $(document).ready(function () {
     // buttons for number pad
     $(".btn0").on("click", function () {
@@ -47,10 +53,17 @@ $(document).ready(function () {
     });
     const pushNumber = function (number) {
         console.log(number);
+        // remove first digit if length already 3
         if (digits.length === 3) {
             digits.shift();
         }
+        // add number to digits
         digits.push(number);
+
+        // move values in the digits divs to the left
+        $('.digitLeft').text($('.digitCenter').text());
+        $('.digitCenter').text($('.digitRight').text());
+        $('.digitRight').text(number);
     };
     // pokemonRequest takes the id and adds it to the end point
     const pokemonRequest = (id) => {
@@ -63,9 +76,8 @@ $(document).ready(function () {
     // }
 
     $(".reset").on("click", function(event) {
-        digits.pop();
-        digits.pop();
-        digits.pop();
+        digits = [];
+        $('.digitsDisplay div').html('');
     });
 
     $(".enter").on("click", function (event) {
@@ -93,20 +105,24 @@ $(document).ready(function () {
                     id: id,
                     sprites: sprites,
                 });
+                // add name, height, weight of selected pokemon
                 $('.pokedexInfo').html (`
                     <p>Name: ${pokedexApp.pokemonStats[0].name}</p>
                     <p>Height: ${pokedexApp.pokemonStats[0].height}</p>
                     <p>Weight: ${pokedexApp.pokemonStats[0].weight}</p>
                 `)
+                // stores pokemon type array
                 pokedexApp.pokemonTypes = pokedexApp.pokemonStats[0].types
-                console.log(pokedexApp.pokemonTypes.length)
+                // renders pokemon image to the site
                 $('.pokemonImage').html(`
                 <img src="${pokedexApp.pokemonStats[0].sprites.front_default}">
                 `)
+                // checks if pokemon has 2 types & adds to page
                 if (pokedexApp.pokemonTypes.length === 2) {
                     $('.pokedexInfo').append(`
                     <p>Type: ${pokedexApp.pokemonStats[0].types[0].type.name}, ${pokedexApp.pokemonStats[0].types[1].type.name}</p>
                     `);
+                // check if pokemon has 1 type & adds to page
                 } else if (pokedexApp.pokemonTypes.length === 1) {
                     $('.pokedexInfo').append(`
                     <p>Type: ${pokedexApp.pokemonStats[0].types[0].type.name}</p>
@@ -115,6 +131,7 @@ $(document).ready(function () {
                 }
 
             })
+            // throws error message if API request unsuccessful
             .fail((error) => {
                 console.log("didn't work", error);
             });
