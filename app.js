@@ -136,8 +136,13 @@ $(document).ready(function () {
                 console.log("didn't work", error);
             });
 
-
-
+            // testing out the below "instructions" button !!!! *******
+            $('.instructions').on('click', function(event){
+                console.log('hello');
+                $('.show').html(`
+                    <p>Hello!</p>
+                `)
+            })
 
         // END OF ENTER BUTTON INPUT
     });

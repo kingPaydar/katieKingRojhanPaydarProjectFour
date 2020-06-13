@@ -87,21 +87,34 @@
   background-color: white;
   border-radius: 15px;
   border: 1px solid black; 
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+    img {
+      width: 200px; 
+    }
 }
 
-.pokedexInfo {
+.pokedexInfoContain {
   width: 80%; 
   height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: black; 
   margin-bottom: 10%; 
   border-radius: 15px; 
   color: white;
-  @include fontSize (15);
 }
 
-// .pokedexInfoText {
-//   @include fontSize (20);
-// }
+.pokedexInfo {
+  padding: 5%; 
+  overflow-x: hidden;
+  overflow-y: auto;
+  @include fontSize (18);
+    p {
+      line-height: 30px; 
+    }
+}
 
 .hinge {
   width: 5%; 
