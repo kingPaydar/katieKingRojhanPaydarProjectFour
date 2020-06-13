@@ -94,8 +94,13 @@
   height: 100px;
   background-color: black; 
   margin-bottom: 10%; 
-   border-radius: 15px; 
+  border-radius: 15px; 
+  color: white;
 }
+
+// .pokedexInfoText {
+//   @include fontSize (20);
+// }
 
 .hinge {
   width: 5%; 

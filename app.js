@@ -58,9 +58,9 @@ $(document).ready(function () {
         return `https://pokeapi.co/api/v2/pokemon/${id}/`;
     };
 
-    const pokemonName = (pokemonRequest) => {
-        return `https://pokeapi.co/api/v2/pokemon/${}/`
-    }
+    // const pokemonName = (pokemonRequest) => {
+    //     return `https://pokeapi.co/api/v2/pokemon/${}/`
+    // }
 
     $(".reset").on("click", function(event) {
         digits.pop();
@@ -83,27 +83,34 @@ $(document).ready(function () {
         });
         // THEN DO THIS
         pokedexApp.request
-            .then(({ name, weight, id, sprites }) => {
-                console.log(name, weight, id, sprites);
+            .then(({ name, weight, height, types, id, sprites }) => {
+                // console.log(name, weight, id, sprites);
                 pokedexApp.pokemonStats.push({
                     name: name,
                     weight: weight,
+                    height: height,
+                    types: types,
                     id: id,
                     sprites: sprites,
                 });
+                $('.pokedexInfo').html (`
+                <p>Name: ${pokedexApp.pokemonStats[0].name}</p>
+                <p>Height: ${pokedexApp.pokemonStats[0].height}</p>
+                <p>Weight: ${pokedexApp.pokemonStats[0].weight}</p>
+                <p>Type: ${pokedexApp.pokemonStats[0].types[0].type.name}, ${pokedexApp.pokemonStats[0].types[1].type.name}</p>
+                `)
+                $('.pokemonImage').html(`
+                <img src="${pokedexApp.pokemonStats[0].sprites.front_default}">
+                `)
+
             })
             .fail((error) => {
                 console.log("didn't work", error);
             });
 
-        $('.pokemonImage').html(`
-        <img src="${pokemonRequest}">
-        `)
 
-        $('.pokedexInfo').html (`
-        <p>Name: ${pokemonRequest.name}</p>
-        `
-        )
+
+
         // END OF ENTER BUTTON INPUT
     });
     //           function listPokemon(pokemonNumber) {
