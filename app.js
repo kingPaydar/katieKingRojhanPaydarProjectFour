@@ -94,14 +94,25 @@ $(document).ready(function () {
                     sprites: sprites,
                 });
                 $('.pokedexInfo').html (`
-                <p>Name: ${pokedexApp.pokemonStats[0].name}</p>
-                <p>Height: ${pokedexApp.pokemonStats[0].height}</p>
-                <p>Weight: ${pokedexApp.pokemonStats[0].weight}</p>
-                <p>Type: ${pokedexApp.pokemonStats[0].types[0].type.name}, ${pokedexApp.pokemonStats[0].types[1].type.name}</p>
+                    <p>Name: ${pokedexApp.pokemonStats[0].name}</p>
+                    <p>Height: ${pokedexApp.pokemonStats[0].height}</p>
+                    <p>Weight: ${pokedexApp.pokemonStats[0].weight}</p>
                 `)
+                pokedexApp.pokemonTypes = pokedexApp.pokemonStats[0].types
+                console.log(pokedexApp.pokemonTypes.length)
                 $('.pokemonImage').html(`
                 <img src="${pokedexApp.pokemonStats[0].sprites.front_default}">
                 `)
+                if (pokedexApp.pokemonTypes.length === 2) {
+                    $('.pokedexInfo').append(`
+                    <p>Type: ${pokedexApp.pokemonStats[0].types[0].type.name}, ${pokedexApp.pokemonStats[0].types[1].type.name}</p>
+                    `);
+                } else if (pokedexApp.pokemonTypes.length === 1) {
+                    $('.pokedexInfo').append(`
+                    <p>Type: ${pokedexApp.pokemonStats[0].types[0].type.name}</p>
+                    `)
+
+                }
 
             })
             .fail((error) => {
