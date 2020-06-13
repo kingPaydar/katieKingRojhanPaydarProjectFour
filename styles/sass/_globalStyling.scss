@@ -1,17 +1,35 @@
 // general styles will go here
 
-section {
-    padding-top: 5%; 
-}
 
 // styles for pokedex v 
 .flexContainer {
   display: flex; 
 }
 
+// pokedex title / text on page 
+.titleSpacing {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%; 
+
+}
+
+.background {
+    background-image: url(../assets/pallet_town.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttonContainer {
+  display: flex; 
+  flex-direction: column;
+  width: 40%; 
+}
+
 .pokedexBase { 
   flex-direction: column;
-  background: linear-gradient(to left, $accentColor 0%, $mainColor 20%);
+  background: linear-gradient(to left, $accentColor 0%, $mainColor 8%);
   height: 500px;
   width: 45%;
   border-top-left-radius: 30px;
@@ -19,27 +37,31 @@ section {
   box-shadow: -10px 8px 1px 3px $accentColor; 
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
 }
+
 
 .pokedexTop {
   width: 100%;
-  height: 20%; 
+  height: 25%; 
   background-color: $mainColor;
   border-bottom: 5px solid $accentColor; 
   border-top-left-radius: 30px; 
+  border-bottom-right-radius: 150px;
   position: relative;
 }
 
 .blueCircle {
   position: absolute;
-  left: 2%; 
-  top: 4%; 
+  left: 5%; 
+  top: 10%; 
   height: 80px;
   width: 80px;
   border-radius: 50%;
   background: (linear-gradient(to right, rgb(0, 50, 214), #135dff 60%));
   border: 2px solid white; 
 }
+
 
 .highlight {
   height: 30px;
@@ -77,24 +99,59 @@ section {
 
 .hinge {
   width: 5%; 
-  background-color: $mainColor;
   border: 2px solid #790808;
-  box-shadow: -4px 8px 1px 3px #7d0808;
-
+  box-shadow: -4px 8px 1px 3px #860f0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  background: linear-gradient(to right, #8B0000, #C00D0D, #8B0000);
+  z-index: 2;
 }
-// NEED TO CREATE HINGE BOXES?!?! x 3 !!
+
+.hingePart {
+  width: 50px;
+  height: 50px; 
+  border: 2px solid #790808;
+  box-shadow: -3px 1px 5px 3px #7d0808;
+  background: linear-gradient(to left, #790808, #c00d0d, #790808);
+}
+
+//pokedex "corner" on the cover v
+.pokedexCoverCorner {
+  height: 100px;
+  background-color: #c00d0d;
+  position: absolute;
+  top: 28%;
+  width: 17%;
+  right: 35%;
+  border-top-right-radius: 40px;
+  z-index: -1;
+}
+
+.pokedexCoverCornerTurn {
+    width: 19%;
+  height: 100px;
+  background-color: #c00d0d;
+  position: absolute;
+  rotate: 37deg;
+  top: 38%;
+  right: 22%;
+  border-top-left-radius: 11px;
+  z-index: -1;
+}
+//pokedex "corner" on the cover ^
 
 .pokedexCover {
   flex-direction: column;
   width: 45%; 
   height: 400px; 
   background-color: $mainColor;
-  border: 5px solid $accentColor;
   align-self: flex-end;
   border-left: none; 
-  border-top-right-radius: 30px; 
   border-bottom-right-radius: 30px;
   box-shadow: 0px 8px 1px 3px $accentColor;
+  z-index: 1;
 }
 
 .pokedexCoverWrapper {
@@ -109,10 +166,26 @@ section {
 // pokedex number pad v 
 
 button {
-  background: linear-gradient(to right, #8DC5CB 10%, #2E94B5 30% );
+  background: linear-gradient(to left, #8DC5CB 10%, #2E94B5 30% );
   border: 2px solid #003A4C; 
   flex: 1 1 20%;
   padding: 5%; 
+  @include fontSize(20);
+    &:active {
+    background: #0c7ba0;
+  }
+}
+
+button:focus,
+input:focus,
+button:hover,
+input:hover {
+  border: 2px dotted black;
+  cursor: pointer;  
+}
+
+.enter {
+  margin-right: 1%; 
 }
 
 .numberPad {
@@ -132,6 +205,7 @@ input {
   padding: 2%; 
   background-color: #8abb17;
   flex: 1 1 auto;
+  @include fontSize(15);
 }
 
 //styles for the number pad ^

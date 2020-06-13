@@ -266,14 +266,38 @@ img {
   width: 80%;
 }
 
-section {
-  padding-top: 5%;
-}
-
 .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.titleSpacing {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1%;
+}
+
+.background {
+  background-image: url(../assets/pallet_town.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
 }
 
 .pokedexBase {
@@ -281,8 +305,8 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(20%, #c00d0d));
-  background: linear-gradient(to left, #790808 0%, #c00d0d 20%);
+  background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(8%, #c00d0d));
+  background: linear-gradient(to left, #790808 0%, #c00d0d 8%);
   height: 500px;
   width: 45%;
   border-top-left-radius: 30px;
@@ -295,21 +319,23 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 2;
 }
 
 .pokedexTop {
   width: 100%;
-  height: 20%;
+  height: 25%;
   background-color: #c00d0d;
   border-bottom: 5px solid #790808;
   border-top-left-radius: 30px;
+  border-bottom-right-radius: 150px;
   position: relative;
 }
 
 .blueCircle {
   position: absolute;
-  left: 2%;
-  top: 4%;
+  left: 5%;
+  top: 10%;
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -354,10 +380,58 @@ section {
 
 .hinge {
   width: 5%;
-  background-color: #c00d0d;
   border: 2px solid #790808;
-  -webkit-box-shadow: -4px 8px 1px 3px #7d0808;
-          box-shadow: -4px 8px 1px 3px #7d0808;
+  -webkit-box-shadow: -4px 8px 1px 3px #860f0f;
+          box-shadow: -4px 8px 1px 3px #860f0f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(#8B0000), color-stop(#C00D0D), to(#8B0000));
+  background: linear-gradient(to right, #8B0000, #C00D0D, #8B0000);
+  z-index: 2;
+}
+
+.hingePart {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #790808;
+  -webkit-box-shadow: -3px 1px 5px 3px #7d0808;
+          box-shadow: -3px 1px 5px 3px #7d0808;
+  background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(#c00d0d), to(#790808));
+  background: linear-gradient(to left, #790808, #c00d0d, #790808);
+}
+
+.pokedexCoverCorner {
+  height: 100px;
+  background-color: #c00d0d;
+  position: absolute;
+  top: 28%;
+  width: 17%;
+  right: 35%;
+  border-top-right-radius: 40px;
+  z-index: -1;
+}
+
+.pokedexCoverCornerTurn {
+  width: 19%;
+  height: 100px;
+  background-color: #c00d0d;
+  position: absolute;
+  rotate: 37deg;
+  top: 38%;
+  right: 22%;
+  border-top-left-radius: 11px;
+  z-index: -1;
 }
 
 .pokedexCover {
@@ -368,14 +442,13 @@ section {
   width: 45%;
   height: 400px;
   background-color: #c00d0d;
-  border: 5px solid #790808;
   -ms-flex-item-align: end;
       align-self: flex-end;
   border-left: none;
-  border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   -webkit-box-shadow: 0px 8px 1px 3px #790808;
           box-shadow: 0px 8px 1px 3px #790808;
+  z-index: 1;
 }
 
 .pokedexCoverWrapper {
@@ -397,13 +470,31 @@ section {
 }
 
 button {
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #8DC5CB), color-stop(30%, #2E94B5));
-  background: linear-gradient(to right, #8DC5CB 10%, #2E94B5 30%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(10%, #8DC5CB), color-stop(30%, #2E94B5));
+  background: linear-gradient(to left, #8DC5CB 10%, #2E94B5 30%);
   border: 2px solid #003A4C;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20%;
           flex: 1 1 20%;
   padding: 5%;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+button:active {
+  background: #0c7ba0;
+}
+
+button:focus,
+input:focus,
+button:hover,
+input:hover {
+  border: 2px dotted black;
+  cursor: pointer;
+}
+
+.enter {
+  margin-right: 1%;
 }
 
 .numberPad {
@@ -427,4 +518,6 @@ input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  font-size: 15px;
+  font-family: 'Press Start 2P', cursive;
 }

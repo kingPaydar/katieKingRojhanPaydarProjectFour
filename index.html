@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Pokedex</title>
 </head>
 <body>
 
     <main>
-        <section class="wrapper">
-            <h1>POKEDEX</h1>
-            <h2>click here for instructions</h2>
+        <section class="background">
+            <div class="wrapper">
+            <!-- title of page -->
+            <div class="flexContainer titleSpacing">
+            <h1><img src="https://fontmeme.com/permalink/200613/a6dd59a6e8f4e7c50fcde7db78bab361.png" alt="PokeDex"
+                    border="0"></h1>
+            <div class="buttonContainer">
+                <button>click here for instructions</button>
+                <button>themes & music</button>
+            </div>
+            </div>
         <!-- inspired by toucan toco -->
         <div class="flexContainer">
             <div class="pokedexBase flexContainer">
@@ -25,8 +34,16 @@
                 </div>
                 <div class="pokedexInfo"></div>
             </div>
-            <div class="hinge"></div>
+            <div class="hinge">
+                <div class="hingePart"></div>
+                <div class="hingePart"></div>
+                <div class="hingePart"></div>
+            </div>
+            
             <div class="pokedexCover flexContainer">
+             <!-- ATTEMPTING TO ADD SHARP CORNER TO POKEDEX COVER IF KATIE H8S REMOVE -->
+                    <div class="pokedexCoverCorner"></div>
+                    <div class="pokedexCoverCornerTurn"></div>
                 <!-- wrapper for pokedex cover content -->
                 <div class="pokedexCoverWrapper">
                 <!-- number display -->
@@ -51,6 +68,7 @@
                     <input type="submit" class="reset" value="CLEAR">
                 </div>
                 </div>
+            </div>
             </div>
         </section>
     </main>

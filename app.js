@@ -27,7 +27,7 @@ $(document).ready(function () {
     $(".btn3").on("click", function () {
         pushNumber("3");
     });
-    $("btn4").on("click", function () {
+    $(".btn4").on("click", function () {
         pushNumber("4");
     });
     $(".btn5").on("click", function () {
@@ -58,11 +58,9 @@ $(document).ready(function () {
         return `https://pokeapi.co/api/v2/pokemon/${id}/`;
     };
 
-    // WE WILL WORK ON THIS SATURDAY --> WE NEED TO EXTRACT THE IMAGE FROM OUR API ONTO THE POKEDEX SCREEN! ********** 
-    $('.pokemonImage').html(`
-        <img src="${pokemonId.sprites.front_default}">
-        `)
-      
+    const pokemonName = (pokemonRequest) => {
+        return `https://pokeapi.co/api/v2/pokemon/${}/`
+    }
 
     $(".reset").on("click", function(event) {
         digits.pop();
@@ -86,7 +84,7 @@ $(document).ready(function () {
         // THEN DO THIS
         pokedexApp.request
             .then(({ name, weight, id, sprites }) => {
-                // console.log(name, weight, id, sprites);
+                console.log(name, weight, id, sprites);
                 pokedexApp.pokemonStats.push({
                     name: name,
                     weight: weight,
@@ -97,6 +95,15 @@ $(document).ready(function () {
             .fail((error) => {
                 console.log("didn't work", error);
             });
+
+        $('.pokemonImage').html(`
+        <img src="${pokemonRequest}">
+        `)
+
+        $('.pokedexInfo').html (`
+        <p>Name: ${pokemonRequest.name}</p>
+        `
+        )
         // END OF ENTER BUTTON INPUT
     });
     //           function listPokemon(pokemonNumber) {
