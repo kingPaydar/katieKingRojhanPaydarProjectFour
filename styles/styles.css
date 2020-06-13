@@ -282,7 +282,7 @@ img {
   padding: 1%;
 }
 
-.background {
+body {
   background-image: url(../assets/pallet_town.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -320,6 +320,10 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 2;
+}
+
+.pokedexCentering {
+  margin-bottom: 10%;
 }
 
 .pokedexTop {
@@ -569,6 +573,11 @@ input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  font-size: 15px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+h2.swal2-title {
   font-size: 15px;
   font-family: 'Press Start 2P', cursive;
 }

@@ -132,13 +132,33 @@ $(document).ready(function () {
             })
             // throws error message if API request unsuccessful
             .fail((error) => {
-                console.log("didn't work", error);
+                // console.log("didn't work", error);
+                // handles error if Pokemon ID number is too high
                 if (pokedexApp.pokemonId > 807) {
-                    alert("That Pokemon doesn't exist. Please enter a number between 1 and 807.")
+                    Swal.fire({
+                        title: "That Pokemon doesn't exist.\nPlease enter a number between 1 and 807.",
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    })
+                    // alert("That Pokemon doesn't exist. Please enter a number between 1 and 807.")
+                // handles error if 0 present befoe pokemon ID number
                 } else if ((digits[0] == 0) || (digits[0] == 0 && digits[1] == 0)) {
-                    alert('It looks like you entered "0" before your number. Please try again with a number that does not start with "0".')
-                }
-            });
+                    Swal.fire({
+                        title: 'It looks like you entered "0" before your number.\n\nPlease try again with a number that does not start with "0".',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    })
+
+                    // alert('It looks like you entered "0" before your number. Please try again with a number that does not start with "0".')
+                }});
 
             // testing out the below "instructions" button !!!! *******
             $('.instructions').on('click', function(event){

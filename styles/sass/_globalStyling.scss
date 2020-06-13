@@ -14,7 +14,7 @@
 
 }
 
-.background {
+body {
     background-image: url(../assets/pallet_town.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -38,6 +38,10 @@
   align-items: center;
   justify-content: space-between;
   z-index: 2;
+}
+
+.pokedexCentering {
+    margin-bottom: 10%;
 }
 
 
@@ -238,6 +242,10 @@ input {
   background-color: #8abb17;
   flex: 1 1 auto;
   @include fontSize(15);
+}
+
+h2.swal2-title {
+  @include fontSize (15);
 }
 
 //styles for the number pad ^
