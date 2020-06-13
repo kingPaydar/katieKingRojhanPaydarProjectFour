@@ -15,9 +15,9 @@ pokedexApp.pokemonId = 0;
 let digits = [];
 
 // initialize text for digit divs
-$('.digitLeft').text(0);
-$('.digitCenter').text(0);
-$('.digitRight').text(0);
+// $('.digitLeft').text(0);
+// $('.digitCenter').text(0);
+// $('.digitRight').text(0);
 
 $(document).ready(function () {
     // buttons for number pad
@@ -127,13 +127,17 @@ $(document).ready(function () {
                     $('.pokedexInfo').append(`
                     <p>Type: ${pokedexApp.pokemonStats[0].types[0].type.name}</p>
                     `)
-
                 }
 
             })
             // throws error message if API request unsuccessful
             .fail((error) => {
                 console.log("didn't work", error);
+                if (pokedexApp.pokemonId > 807) {
+                    alert("That Pokemon doesn't exist. Please enter a number between 1 and 807.")
+                } else if ((digits[0] == 0) || (digits[0] == 0 && digits[1] == 0)) {
+                    alert('It looks like you entered "0" before your number. Please try again with a number that does not start with "0".')
+                }
             });
 
             // testing out the below "instructions" button !!!! *******
