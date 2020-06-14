@@ -273,9 +273,12 @@ img {
 }
 
 .titleSpacing {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -293,11 +296,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 40%;
+  width: 60%;
+  margin: 5%;
 }
 
 .pokedexBase {
@@ -305,8 +305,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(8%, #c00d0d));
-  background: linear-gradient(to left, #790808 0%, #c00d0d 8%);
+  background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(8%, #ec0808));
+  background: linear-gradient(to left, #790808 0%, #ec0808 8%);
   height: 500px;
   width: 45%;
   border-top-left-radius: 30px;
@@ -329,7 +329,7 @@ body {
 .pokedexTop {
   width: 100%;
   height: 25%;
-  background-color: #c00d0d;
+  background-color: #ec0808;
   border-bottom: 5px solid #790808;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 150px;
@@ -488,8 +488,8 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, right top, from(#8B0000), color-stop(#C00D0D), to(#8B0000));
-  background: linear-gradient(to right, #8B0000, #C00D0D, #8B0000);
+  background: -webkit-gradient(linear, left top, right top, from(#8B0000), color-stop(#ec0808), to(#8B0000));
+  background: linear-gradient(to right, #8B0000, #ec0808, #8B0000);
   z-index: 2;
 }
 
@@ -499,8 +499,8 @@ h1 {
   border: 2px solid #790808;
   -webkit-box-shadow: -3px 1px 5px 3px #7d0808;
           box-shadow: -3px 1px 5px 3px #7d0808;
-  background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(#c00d0d), to(#790808));
-  background: linear-gradient(to left, #790808, #c00d0d, #790808);
+  background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(#ec0808), to(#790808));
+  background: linear-gradient(to left, #790808, #ec0808, #790808);
 }
 
 .pokedexCover {
@@ -510,7 +510,7 @@ h1 {
           flex-direction: column;
   width: 45%;
   height: 400px;
-  background-color: #c00d0d;
+  background-color: #ec0808;
   -ms-flex-item-align: end;
       align-self: flex-end;
   border-left: none;
@@ -663,8 +663,8 @@ h2.swal2-title {
   .pokedexCover {
     width: 100%;
     height: 600px;
-    background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(8%, #c00d0d));
-    background: linear-gradient(to left, #790808 0%, #c00d0d 8%);
+    background: -webkit-gradient(linear, right top, left top, from(#790808), color-stop(8%, #ec0808));
+    background: linear-gradient(to left, #790808 0%, #ec0808 8%);
     border-bottom-left-radius: 30px;
     -webkit-box-shadow: none;
             box-shadow: none;
