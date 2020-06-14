@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3212c86140.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Pokedex</title>
 </head>
@@ -32,8 +33,14 @@
                 <div class="pokedexExternalScreen">
                     <div class="pokedexInternalScreen pokemonImage"></div>
                 </div>
-                <div class="pokedexInfoContain">
-                <div class="pokedexInfo"></div>
+                <div class="flexContainer pokedexInfoSizing">
+                    <div class="pokedexInfoContain">
+                    <div class="pokedexInfo"></div>
+                </div>
+                <div class="buttonBox">
+                <i class="fas fa-sort-up"></i>
+                <i class="fas fa-caret-down"></i>
+                </div>
                 </div>
             </div>
             <div class="hinge">
@@ -43,9 +50,6 @@
             </div>
             
             <div class="pokedexCover flexContainer">
-             <!-- ATTEMPTING TO ADD SHARP CORNER TO POKEDEX COVER IF KATIE H8S REMOVE -->
-                    <div class="pokedexCoverCorner"></div>
-                    <div class="pokedexCoverCornerTurn"></div>
                 <!-- wrapper for pokedex cover content -->
                 <div class="pokedexCoverWrapper">
                 <!-- number display -->

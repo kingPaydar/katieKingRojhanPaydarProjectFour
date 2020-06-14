@@ -5,3 +5,8 @@
     font-size: $sizeValue * 1px;
     font-family: 'Press Start 2P', cursive;
 }
+
+@mixin alertFont($sizeValue) {
+    font-size: $sizeValue * 1px; 
+    font-family: 'Ubuntu', sans-serif;
+}

@@ -136,7 +136,8 @@ $(document).ready(function () {
                 // handles error if Pokemon ID number is too high
                 if (pokedexApp.pokemonId > 807) {
                     Swal.fire({
-                        title: "That Pokemon doesn't exist.\nPlease enter a number between 1 and 807.",
+                        title: "Hey Pokémon Trainer!",
+                        text: "That Pokemon doesn't exist.\nPlease enter a number between 1 and 807.",
                         showClass: {
                             popup: 'animate__animated animate__fadeInDown'
                         },
@@ -148,7 +149,8 @@ $(document).ready(function () {
                 // handles error if 0 present befoe pokemon ID number
                 } else if ((digits[0] == 0) || (digits[0] == 0 && digits[1] == 0)) {
                     Swal.fire({
-                        title: 'It looks like you entered "0" before your number.\n\nPlease try again with a number that does not start with "0".',
+                        title: "Hey Pokémon Trainer!",
+                        text: 'It looks like you entered "0" before your number.\n\nPlease try again with a number that does not start with "0".',
                         showClass: {
                             popup: 'animate__animated animate__fadeInDown'
                         },
@@ -162,11 +164,20 @@ $(document).ready(function () {
 
             // testing out the below "instructions" button !!!! *******
             $('.instructions').on('click', function(event){
-                console.log('hello');
-                $('.show').html(`
-                    <p>Hello!</p>
-                `)
-            })
+                Swal.fire({
+                    title: `Welcome to your Pokedex!`,
+                    text: `To view a Pokemon's information, use the number pad 
+                    to input its ID number and then click "enter." You can also press 
+                    "clear" to reset your selection. Note: You must input a number 
+                    between 1 – 807, and your number cannot start with 0.'`,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                })
+            }) 
 
         // END OF ENTER BUTTON INPUT
     });

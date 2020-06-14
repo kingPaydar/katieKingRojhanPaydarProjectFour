@@ -99,8 +99,37 @@ body {
     }
 }
 
-.pokedexInfoContain {
+.pokedexInfoSizing {
   width: 80%; 
+}
+
+.buttonBox {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  position: relative;
+  width: 40%; 
+  height: 100px;
+  border-radius: 15px;
+  padding: 2%; 
+  background-color: blue;
+  font-size: 100px; 
+  color: green; 
+}
+
+.fa-sort-up {
+  position: absolute; 
+  bottom: 5px; 
+}
+
+.fa-caret-down {
+  position: absolute; 
+  top: 20px; 
+}
+
+.pokedexInfoContain {
+  width: 60%; 
   height: 100px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -139,31 +168,6 @@ body {
   box-shadow: -3px 1px 5px 3px #7d0808;
   background: linear-gradient(to left, #790808, #c00d0d, #790808);
 }
-
-//pokedex "corner" on the cover v
-.pokedexCoverCorner {
-  height: 100px;
-  background-color: #c00d0d;
-  position: absolute;
-  top: 28%;
-  width: 17%;
-  right: 35%;
-  border-top-right-radius: 40px;
-  z-index: -1;
-}
-
-.pokedexCoverCornerTurn {
-  width: 19%;
-  height: 100px;
-  background-color: #c00d0d;
-  position: absolute;
-  rotate: 37deg;
-  top: 38%;
-  right: 22%;
-  border-top-left-radius: 11px;
-  z-index: -1;
-}
-//pokedex "corner" on the cover ^
 
 .pokedexCover {
   flex-direction: column;
@@ -244,8 +248,19 @@ input {
   @include fontSize(15);
 }
 
+div .swal2-popup {
+  padding: 5%; 
+  border-radius: 15px; 
+}
+
 h2.swal2-title {
-  @include fontSize (15);
+  @include alertFont(25);
+  margin-bottom: 5%;
+}
+
+#swal2-content {
+  @include alertFont(20);
+  line-height: 35px;
 }
 
 //styles for the number pad ^

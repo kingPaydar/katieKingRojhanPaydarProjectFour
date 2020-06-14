@@ -1,0 +1,70 @@
+// media queries will go here 
+
+
+// tablet size screen / button fix
+@media (max-width: 855px) {
+    .instructions {
+        font-size: 16px; 
+    }
+
+    .pokedexCentering {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .pokedexBase {
+        width: 100%; 
+        height: 600px;
+        border-top-right-radius: 30px;
+        border-bottom: 5px solid #790808;
+        box-shadow: none; 
+        border-bottom-left-radius: 0; 
+    }
+
+    .hinge {
+        display: none; 
+    }
+
+    .pokedexCover {
+        width: 100%; 
+        height: 600px;
+        background: linear-gradient(to left, #790808 0%, #c00d0d 8%);
+        border-bottom-left-radius: 30px;
+        box-shadow: none; 
+    }
+
+    .pokedexTop {
+        border-top-right-radius: 30px;
+    }
+
+    .blueCircle {
+        width: 100px; 
+        height: 100px; 
+        .highlight {
+            right: 15px;
+        }
+    }
+
+}
+
+  @media (max-width: 480px) {
+    
+    .pokedexCentering {
+        width: 100%; 
+        margin-bottom: 0;
+    }
+
+    .wrapper {
+        width: 100%; 
+    }
+
+    .instructions {
+        font-size: 10px; 
+    }
+
+    .pokedexCover,
+    .pokedexBase {
+        border-radius: 0px;
+    }
+
+    }
