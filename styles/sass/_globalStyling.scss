@@ -16,7 +16,9 @@
 }
 
 h1 {
-  display: none; 
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
 }
 
 body {
