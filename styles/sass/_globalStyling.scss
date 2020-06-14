@@ -116,7 +116,13 @@ body {
     }
 }
 
+h2 {
+  @include fontSize(10);
+  margin: 0 5% 2% 5%; 
+}
+
 .pokedexInfoSizing {
+  flex-direction: column;
   width: 80%; 
 }
 

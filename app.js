@@ -128,35 +128,7 @@ $(document).ready(function () {
                     <p>Type: ${pokedexApp.pokemonStats[0].types[0].type.name}</p>
                     `)
                 }
-                const scrolled = 0;
-
-                $(document).ready(function () {
-
-
-                    $("#downClick").on("click", function () {
-                        scrolled = scrolled + 300;
-
-                        $(".cover").animate({
-                            scrollTop: scrolled
-                        });
-
-                    });
-
-
-                    $("#upClick").on("click", function () {
-                        scrolled = scrolled - 300;
-
-                        $(".cover").animate({
-                            scrollBottom: scrolled
-                        });
-
-                    });
-
-
-                    $(".clearValue").on("click", function () {
-                        scrolled = 0;
-                    });
-
+                
 
                 });
             })
@@ -195,23 +167,33 @@ $(document).ready(function () {
             // testing out the below "instructions" button !!!! *******
         // END OF ENTER BUTTON INPUT
             });
-    
-    $('.instructions').on('click', function (event) {
-        Swal.fire({
-            title: `Welcome to your Pokedex!`,
-            text: `To view a Pokemon's information, use the number pad 
-                    to input its ID number and then click "enter." You can also press 
-                    "clear" to reset your selection. Note: You must input a number 
-                    between 1 – 807, and your number cannot start with 0.'`,
-            showClass: {
-                popup: 'animate__animated animate__fadeInDown'
-            },
-            hideClass: {
-                popup: 'animate__animated animate__fadeOutUp'
-            }
-        })
+            $('.instructions').on('click', function (event) {
+                Swal.fire({
+                    title: `Welcome to your Pokedex!`,
+                    text: `To view a Pokemon's information, use the number pad 
+                            to input its ID number and then click "enter." Scroll where the Pokemon's 
+                            information appears to view the entirety of your selected Pokemons stats. You can also press 
+                            "clear" to reset your selection. Note: You must input a number 
+                            between 1 – 807, and your number cannot start with 0.'`,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                })
+        
+                })
 
-        })
+// https://stackoverflow.com/questions/6677035/jquery-scroll-to-element
+// mobile scroll --> NEED TO WORK ON FOR HOW TO MAKE THIS HAPPEN ONLY WHEN IN MOBILE 
+
+        $("#mobileScroll").click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("section").offset().top
+            }, 500);
+        });
+            
 
         // Swal.fire({
         //     title: `Welcome to your Pokedex!`,
@@ -226,5 +208,3 @@ $(document).ready(function () {
         //         popup: 'animate__animated animate__fadeOutUp'
         //     }
         // })
-    })
-;

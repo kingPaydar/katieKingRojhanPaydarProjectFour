@@ -413,7 +413,17 @@ body {
   width: 200px;
 }
 
+h2 {
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0 5% 2% 5%;
+}
+
 .pokedexInfoSizing {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 80%;
 }
 
@@ -706,5 +716,8 @@ button.ok {
   }
   body {
     background: none;
+  }
+  .buttonContainer {
+    width: 100%;
   }
 }
