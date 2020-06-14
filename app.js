@@ -163,38 +163,24 @@ $(document).ready(function () {
                 }});
 
             // testing out the below "instructions" button !!!! *******
-            $('.instructions').on('click', function(event){
-                Swal.fire({
-                    title: `Welcome to your Pokedex!`,
-                    text: `To view a Pokemon's information, use the number pad 
-                    to input its ID number and then click "enter." You can also press 
-                    "clear" to reset your selection. Note: You must input a number 
-                    between 1 – 807, and your number cannot start with 0.'`,
-                    showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                    }
-                })
-            }) 
+       
 
         // END OF ENTER BUTTON INPUT
     });
-    //           function listPokemon(pokemonNumber) {
-    // return $.ajax({
-    //     url: `https://pokeapi.co/api/v2/pokemon/${pokemonNumber}/`,
-    //     dataType: 'json',
-    //     method: 'GET'
-    // })
-    // use variable to dive in for API data to access its images
-    //       function listPokemon(pokemonNumber) {
-    // return $.ajax({
-    //     url: `https://pokeapi.co/api/v2/pokemon/${pokemonNumber}/`,
-    //     dataType: 'json',
-    //     method: 'GET'
-    // })
-    // Darshana suggestion to go more in depth with our pseudocode
-    // create a for loop to grab pokemon image
-    // make placeholder for pokeImage and use template literals to pull in sprites???????????
+    
+    $('.instructions').on('click', function (event) {
+        Swal.fire({
+            title: `Welcome to your Pokedex!`,
+            text: `To view a Pokemon's information, use the number pad 
+                    to input its ID number and then click "enter." You can also press 
+                    "clear" to reset your selection. Note: You must input a number 
+                    between 1 – 807, and your number cannot start with 0.'`,
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    }) 
 });

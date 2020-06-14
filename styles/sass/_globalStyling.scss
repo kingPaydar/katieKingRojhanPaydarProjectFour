@@ -53,6 +53,8 @@ body {
   border-top-left-radius: 30px; 
   border-bottom-right-radius: 150px;
   position: relative;
+  display: flex; 
+  flex-direction: row-reverse;
 }
 
 .blueCircle {
@@ -75,6 +77,15 @@ body {
   top: 5px;
   background-color: rgba(255, 255, 255, 0.507);
   border-radius: 50%;
+}
+
+h1 {
+  width: 50%; 
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: unset;
+  margin-right: 15%;
 }
 
 .pokedexExternalScreen {
