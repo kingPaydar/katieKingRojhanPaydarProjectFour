@@ -631,6 +631,17 @@ h2.swal2-title {
   line-height: 35px;
 }
 
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+  z-index: 5;
+  position: absolute;
+  margin: 50%;
+}
+
 @media (max-width: 855px) {
   .instructions {
     font-size: 2vw;
