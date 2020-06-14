@@ -692,4 +692,7 @@ h2.swal2-title {
   .pokedexBase {
     border-radius: 0px;
   }
+  body {
+    background: none;
+  }
 }
