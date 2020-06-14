@@ -186,13 +186,31 @@ $(document).ready(function () {
                 })
 
 // https://stackoverflow.com/questions/6677035/jquery-scroll-to-element
-// mobile scroll --> NEED TO WORK ON FOR HOW TO MAKE THIS HAPPEN ONLY WHEN IN MOBILE 
+// mobile scroll --> NEED TO WORK ON FOR HOW TO MAKE THIS HAPPEN ONLY WHEN IN MOBILE
 
-        $("#mobileScroll").click(function () {
+function enableScroll(x) {
+    $(".enter").click(function () {
+    if (x.matches) { // If media query matches
             $([document.documentElement, document.body]).animate({
                 scrollTop: $("section").offset().top
             }, 500);
-        });
+            //// NEED TO FIGURE OUT HOW TO DISABLE SCROLL IN FULL SCREEN! 
+        } else if (fullScreen.matches){
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".pokedexTop").offset().top
+            }, 0);
+        }
+
+    }); 
+}
+
+const fullScreen = window.matchMedia("(max-width: 1280px)")
+const tablet = window.matchMedia("(max-width: 855px)")
+enableScroll(tablet) // Call listener function at run time
+tablet.addListener(enableScroll) // Attach listener function on state changes 
+
+
+   
             
 
         // Swal.fire({
