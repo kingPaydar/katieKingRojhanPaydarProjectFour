@@ -8,7 +8,8 @@
 
 // pokedex title / text on page 
 .titleSpacing {
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   align-items: center;
   padding: 1%; 
 
@@ -23,13 +24,13 @@ body {
 
 .buttonContainer {
   display: flex; 
-  flex-direction: column;
-  width: 40%; 
+  width: 60%;
+  margin: 5%;
 }
 
 .pokedexBase { 
   flex-direction: column;
-  background: linear-gradient(to left, $accentColor 0%, $mainColor 8%);
+  background: linear-gradient(to left, #790808 0%, #ec0808 8%);
   height: 500px;
   width: 45%;
   border-top-left-radius: 30px;
@@ -48,7 +49,7 @@ body {
 .pokedexTop {
   width: 100%;
   height: 25%; 
-  background-color: $mainColor;
+  background-color: #ec0808;
   border-bottom: 5px solid $accentColor; 
   border-top-left-radius: 30px; 
   border-bottom-right-radius: 150px;
@@ -168,7 +169,7 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center; 
-  background: linear-gradient(to right, #8B0000, #C00D0D, #8B0000);
+  background: linear-gradient(to right, #8B0000, #ec0808, #8B0000);
   z-index: 2;
 }
 
@@ -177,14 +178,14 @@ h1 {
   height: 50px; 
   border: 2px solid #790808;
   box-shadow: -3px 1px 5px 3px #7d0808;
-  background: linear-gradient(to left, #790808, #c00d0d, #790808);
+  background: linear-gradient(to left, #790808, #ec0808, #790808);
 }
 
 .pokedexCover {
   flex-direction: column;
   width: 45%; 
   height: 400px; 
-  background-color: $mainColor;
+  background-color: #ec0808;
   align-self: flex-end;
   border-left: none; 
   border-bottom-right-radius: 30px;
