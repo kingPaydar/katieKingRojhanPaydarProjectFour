@@ -286,10 +286,10 @@ img {
 }
 
 body {
-  background-image: url(../assets/pallet_town.png);
+  background-image: url(../assets/testing_background.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: unset;
 }
 
 .buttonContainer {
