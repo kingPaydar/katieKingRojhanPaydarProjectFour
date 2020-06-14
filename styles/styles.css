@@ -286,7 +286,10 @@ img {
 }
 
 h1 {
-  display: none;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 body {
