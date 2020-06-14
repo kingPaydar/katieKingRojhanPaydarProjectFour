@@ -139,7 +139,7 @@ $(document).ready(function () {
                         .css("display", "block")
                     $('.ok').on('click', function () {
                         $('.tooHighError').css('display', 'none')
-                    }
+                    })
 
                     // $('.tooHighError')
                     //     .toggleClass('hidden')
@@ -203,5 +203,5 @@ $(document).ready(function () {
         //         popup: 'animate__animated animate__fadeOutUp'
         //     }
         // })
-    }) 
+    )}) 
 });
