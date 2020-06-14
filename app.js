@@ -128,67 +128,59 @@ $(document).ready(function () {
                     <p>Type: ${pokedexApp.pokemonStats[0].types[0].type.name}</p>
                     `)
                 }
-
             })
             // throws error message if API request unsuccessful
             .fail((error) => {
                 // handles error if Pokemon ID number is too high
                 if (pokedexApp.pokemonId > 807) {
                     $('.tooHighError')
-                        .css("display", "block")
-                    $('.ok').on('click', function () {
-                        $('.tooHighError').css('display', 'none')
+                        .toggleClass('hidden')
+                        .toggleClass('active')
+                    Swal.fire({
+                        title: "Hey Pokémon Trainer!",
+                        text: "That Pokemon doesn't exist.\nPlease enter a number between 1 and 807.",
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
                     })
-
-                    // $('.tooHighError')
-                    //     .toggleClass('hidden')
-                    //     .toggleClass('active')
-                    // Swal.fire({
-                    //     title: "Hey Pokémon Trainer!",
-                    //     text: "That Pokemon doesn't exist.\nPlease enter a number between 1 and 807.",
-                    //     showClass: {
-                    //         popup: 'animate__animated animate__fadeInDown'
-                    //     },
-                    //     hideClass: {
-                    //         popup: 'animate__animated animate__fadeOutUp'
-                    //     }
-                    // })
                     // alert("That Pokemon doesn't exist. Please enter a number between 1 and 807.")
                 // handles error if 0 present befoe pokemon ID number
                 } else if ((digits[0] == 0) || (digits[0] == 0 && digits[1] == 0)) {
-                    $('.zeroError')
-                        .css("display", "block")
-                    $('.ok').on('click', function() {
-                        $('.zeroError').css('display', 'none')
+                    Swal.fire({
+                        title: "Hey Pokémon Trainer!",
+                        text: 'It looks like you entered "0" before your number.\n\nPlease try again with a number that does not start with "0".',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
                     })
                 }
-                    // Swal.fire({
-                    //     title: "Hey Pokémon Trainer!",
-                    //     text: 'It looks like you entered "0" before your number.\n\nPlease try again with a number that does not start with "0".',
-                    //     showClass: {
-                    //         popup: 'animate__animated animate__fadeInDown'
-                    //     },
-                    //     hideClass: {
-                    //         popup: 'animate__animated animate__fadeOutUp'
-                    //     }
-                    // })
-
-                    // alert('It looks like you entered "0" before your number. Please try again with a number that does not start with "0".')
                 });
-
             // testing out the below "instructions" button !!!! *******
-       
-
         // END OF ENTER BUTTON INPUT
             });
     
     $('.instructions').on('click', function (event) {
-        $('.instructionsAlert')
-            .css("display", "block")
+        Swal.fire({
+            title: `Welcome to your Pokedex!`,
+            text: `To view a Pokemon's information, use the number pad 
+                    to input its ID number and then click "enter." You can also press 
+                    "clear" to reset your selection. Note: You must input a number 
+                    between 1 – 807, and your number cannot start with 0.'`,
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
         })
-        // hides instructions on button press
-        $('.ok').on('click', function () {
-            $('.instructionsAlert').css('display', 'none')
+
+        })
 
         // Swal.fire({
         //     title: `Welcome to your Pokedex!`,
@@ -204,4 +196,4 @@ $(document).ready(function () {
         //     }
         // })
     })
-});
+;
