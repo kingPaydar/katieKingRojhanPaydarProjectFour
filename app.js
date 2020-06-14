@@ -132,7 +132,6 @@ $(document).ready(function () {
             })
             // throws error message if API request unsuccessful
             .fail((error) => {
-                // console.log("didn't work", error);
                 // handles error if Pokemon ID number is too high
                 if (pokedexApp.pokemonId > 807) {
                     $('.tooHighError')
@@ -184,11 +183,12 @@ $(document).ready(function () {
             });
     
     $('.instructions').on('click', function (event) {
-        $('.instructions')
+        $('.instructionsAlert')
             .css("display", "block")
+        })
+        // hides instructions on button press
         $('.ok').on('click', function () {
-            $('.instructions').css('display', 'none')
-        }
+            $('.instructionsAlert').css('display', 'none')
 
         // Swal.fire({
         //     title: `Welcome to your Pokedex!`,
@@ -203,5 +203,5 @@ $(document).ready(function () {
         //         popup: 'animate__animated animate__fadeOutUp'
         //     }
         // })
-    )}) 
+    })
 });

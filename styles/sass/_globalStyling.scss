@@ -275,16 +275,25 @@ h2.swal2-title {
   line-height: 35px;
 }
 
-.hidden {
+.alert {
+  @include alertFont (20);
   display: none;
+  position: absolute;
+  background-color: white;
+  padding: 5%;
+  width: 100%;
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
 }
 
-// .active {
-//   display: block;
-//   z-index: 5;
-//   position: absolute;
-//   margin: 50%;
-// }
+button.ok {
+  width: 100%;
+  height: 10px;
+}
 
 //styles for the number pad ^
 

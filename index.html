@@ -79,29 +79,29 @@
                 </div>
             </div>
             </div>
-            <div class="hidden instructions">
-                <h2>Welcome to your Pokédex!</h2>
-                <p>To view a Pokemon's information, use the number pad
-                to input its ID number and then click "enter."</p>
-                <p>You can also press
-                "clear" to reset your selection.</p>
-                <p>Note: You must input a number
-                between 1 – 807, and your number cannot start with 0.</p>
-                <button class="ok">OK</button>
-            </div>
-            <div class="hidden zeroError">
-                <h2>Hey Pokémon Trainer!</h2>
-                <p>It looks like you entered "0" before your number.</p>
-                <p>Please try again with a number that does not start with "0".</p>
-                <button class="ok">OK</button>
-            </div>
-            <div class="hidden tooHighError">
-                <h2>Hey Pokémon Trainer!</h2>
-                <p>That Pokemon doesn't exist.</p>
-                <p>Please enter a number between 1 and 807.</p>
-                <button class="ok">OK</button>
-            </div>
         </section>
+                <div class="alert instructionsAlert">
+                    <h2>Welcome to your Pokédex!</h2>
+                    <p>To view a Pokemon's information, use the number pad
+                    to input its ID number and then click "enter."</p>
+                    <p>You can also press
+                    "clear" to reset your selection.</p>
+                    <p>Note: You must input a number
+                    between 1 – 807, and your number cannot start with 0.</p>
+                    <button class="ok">OK</button>
+                </div>
+                <div class="alert zeroError">
+                    <h2>Hey Pokémon Trainer!</h2>
+                    <p>It looks like you entered "0" before your number.</p>
+                    <p>Please try again with a number that does not start with "0".</p>
+                    <button class="ok">OK</button>
+                </div>
+                <div class="alert tooHighError">
+                    <h2>Hey Pokémon Trainer!</h2>
+                    <p>That Pokemon doesn't exist.</p>
+                    <p>Please enter a number between 1 and 807.</p>
+                    <button class="ok">OK</button>
+                </div>
     </main>
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
