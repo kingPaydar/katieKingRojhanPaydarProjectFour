@@ -7,12 +7,34 @@ pokedexApp.digits = [];
 // create variable to hold pokemon ID selected by user
 pokedexApp.pokemonId = 0;
 
+// audio
+let audioClicked = false; 
+
 // init function
 pokedexApp.init = function() {
+
     
 }
 
+$('#volumeToggle').on('click', function () {
+    const themeMusic = document.getElementById('themeMusic');
+    if (audioClicked === false) {
+        themeMusic.play();
+    } else {
+        themeMusic.muted = !themeMusic.muted;
+    }
+    themeMusic.volume = 0.3;
+    themeMusic.paused = false;
+
+    audioClicked = true;
+
+        $('i')
+            .toggleClass('fa-volume-up')
+            .toggleClass('fa-volume-mute');
+})
+
 $(document).ready(function () {
+
     // buttons for number pad
     $(".btn0").on("click", function () {
         pushNumber("0");
@@ -67,13 +89,14 @@ $(document).ready(function () {
 
     $(".reset").on("click", function(event) {
         pokedexApp.digits = [];
-        $('.pokedexApp.digitsDisplay div').html('');
+        console.log(pokedexApp.digits);
+        $('.digitsDisplay div').html('');
     });
 
     $(".enter").on("click", function (event) {
         // on next click on input clear out my returned pokemon array
         pokedexApp.pokemonStats = [];
-        // build pokeUrl from pokemonRequqest function
+        // build pokeUrl from pokemonRequest function
         pokedexApp.pokemonId = pokedexApp.digits.join("");
         pokedexApp.pokeUrl = pokemonRequest(pokedexApp.pokemonId);
         console.log(pokedexApp);
@@ -152,33 +175,11 @@ $(document).ready(function () {
                             information appears to view the entirety of your selected Pokemons stats. You can also press 
                             "clear" to reset your selection. Note: You must input a number 
                             between 1 – 807, and your number cannot start with 0.'`,
-                    showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                    }
                 })
         
                 })
 
 
-                $('.themes').on('click', function (event) {
-                    Swal.fire({
-                        title: `Pewter City`,
-                        text: `words words words`,
-                        imageUrl: './assets/cerulean_city.png',
-                        imageHeight: 200,
-                        imageAlt: 'A tall image',
-                        showClass: {
-                            popup: 'animate__animated animate__fadeInDown'
-                        },
-                        hideClass: {
-                            popup: 'animate__animated animate__fadeOutUp'
-                        }
-                    })
-
-                })
                 // need to create swal alert --> ul --> li x 4 --> four imgs, four p tags? & four buttons
                 // add mute icon inside our alert incase user no longer wants to hear audio **  
                 // need to flex inside 

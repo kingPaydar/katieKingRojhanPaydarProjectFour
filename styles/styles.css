@@ -307,6 +307,10 @@ body {
   margin: 5%;
 }
 
+.show {
+  display: none;
+}
+
 .pokedexBase {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -471,8 +475,8 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, right top, color-stop(#ec0808, #8B0000));
-  background: linear-gradient(to right, #8B0000 #ec0808 #8B0000);
+  background: -webkit-gradient(linear, left top, right top, from(#8B0000), color-stop(#ec0808), to(#8B0000));
+  background: linear-gradient(to right, #8B0000, #ec0808, #8B0000);
   z-index: 2;
 }
 
@@ -722,5 +726,9 @@ button.ok {
   }
   .buttonContainer {
     width: 100%;
+    margin: 0;
+  }
+  .titleSpacing {
+    padding: 0;
   }
 }

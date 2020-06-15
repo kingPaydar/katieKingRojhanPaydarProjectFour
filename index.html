@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3212c86140.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Pokedex</title>
 </head>
@@ -18,7 +19,13 @@
             <div class="flexContainer titleSpacing">
             <div class="buttonContainer">
                 <button class="instructions">click here for instructions</button>
-                <button class="themes">themes & music</button>
+                <button id="volumeToggle" class="volumeToggle">
+                    <p>music</p>
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <audio id="themeMusic" loop>
+                    <source src="audio/cerulean_city_theme.wav" type="audio/mpeg">
+                </audio>
             </div>
             </div>
         <!-- inspired by toucan toco -->
@@ -81,6 +88,7 @@
             </div>
             </div>
         </section>
+        <footer></footer>
             <!-- <div class="alertBoxSizing">
                 <div class="alert instructionsAlert">
                     <h2>Welcome to your Pokédex!</h2>
