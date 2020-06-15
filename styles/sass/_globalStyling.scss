@@ -304,3 +304,17 @@ button.ok {
 //styles for the number pad ^
 
 // styles for pokedex ^ 
+
+// footer styles 
+
+footer {
+  display:flex;
+  justify-content: center;
+  padding: 2%; 
+  background-color: $mainColor;
+  height: 10vh; 
+    img {
+      height: 20px;
+      width: 20px; 
+    }
+}
