@@ -17,7 +17,7 @@
         width: 100%; 
         height: 600px;
         border-top-right-radius: 30px;
-        border-bottom: 5px solid #790808;
+        border-bottom: 5px solid $accentColor;
         box-shadow: none; 
         border-bottom-left-radius: 0; 
     }
@@ -29,7 +29,7 @@
     .pokedexCover {
         width: 100%; 
         height: 600px;
-        background: linear-gradient(to left, #790808 0%, #ec0808 8%);
+        background: linear-gradient(to left, $accentColor 0%, $mainColor 8%);
         border-bottom-left-radius: 30px;
         box-shadow: none;  
     }
@@ -46,7 +46,7 @@
         }
     }
 
-    
+
 
 }
 

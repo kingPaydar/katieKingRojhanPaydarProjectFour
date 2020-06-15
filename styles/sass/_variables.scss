@@ -4,8 +4,31 @@ $mainColor: #ec0808;
 // main bright red colour of pokedex
 $accentColor: #790808; 
 // shadow / accent colour of pokedex 
+$shadowColor: #860f0f; 
+// shading box shadow 
+$hingeShade: #8B0000; 
+// shading for hinge
 $circleColor: #135dff;
 // blue circle colour 
 $circleColorFade: #0032d6; 
 // blue circle colour fade 
-$white: #ffffff; 
+$white: #ffffff;
+// white colour 
+$black: #000000; 
+//black colour
+$highlight: #ffffff81; 
+//highlight for blue circle 
+$externalScreen: #ececec;
+// external screen for pokemon image display 
+$highlightButton: #8DC5CB; 
+// shading for the button
+$mainButtonColor: #2E94B5; 
+// main button colour
+$buttonBorderColor: #003A4C; 
+// border for the buttons
+$buttonPress: #0c7ba0; 
+// dark shadow to indicate button has been pressed
+$digitsLine: #808080; 
+// lines on the digits input 
+$inputButtons: #8abb17;
+// enter and clear button colours
