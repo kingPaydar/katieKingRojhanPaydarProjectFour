@@ -37,7 +37,7 @@ body {
 
 .pokedexBase { 
   flex-direction: column;
-  background: linear-gradient(to left, #790808 0%, #ec0808 8%);
+  background: linear-gradient(to left, $accentColor 0%, $mainColor 8%);
   height: 500px;
   width: 45%;
   border-top-left-radius: 30px;
@@ -55,8 +55,7 @@ body {
 
 .pokedexTop {
   width: 100%;
-  height: 25%; 
-  background-color: #ec0808;
+  height: 25%; $mainColor;
   border-bottom: 5px solid $accentColor; 
   border-top-left-radius: 30px; 
   border-bottom-right-radius: 150px;
@@ -72,7 +71,7 @@ body {
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  background: (linear-gradient(to right, rgb(0, 50, 214), #135dff 60%));
+  background: (linear-gradient(to right, $circleColorFade, $circleColor 60%));
   border: 2px solid white; 
 }
 

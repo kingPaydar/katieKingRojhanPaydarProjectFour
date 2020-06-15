@@ -13,11 +13,32 @@
 const pokedexApp = {};
 pokedexApp.pokemonId = 0;
 let digits = [];
-
-// initialize text for digit divs
-// $('.digitLeft').text(0);
-// $('.digitCenter').text(0);
-// $('.digitRight').text(0);
+pokedexApp.themes = [
+    {
+        name: 'Cerulean City',
+        image: '../assets/cerulean_city.png',
+        description: '.',
+        audio: '../audio/cerulean_city_theme.mp3'
+    },
+    {
+        name: 'Vermillion City',
+        image: '../assets/vermillion_city.png',
+        description: '.',
+        audio: '../audio/vermillion_city_theme.mp3'
+    },
+    {
+        name: 'Pallet Town',
+        image: '../assets/pallet_town.png',
+        description: '.',
+        audio: '../audio/pallet_town_theme.mp3'
+    },
+    {
+        name: 'Pewter City',
+        image: '../assets/pewter_city.png',
+        description: '.',
+        audio: '../audio/pewter_city_theme.mp3'
+    },
+]; 
 
 $(document).ready(function () {
     // buttons for number pad
@@ -71,9 +92,6 @@ $(document).ready(function () {
         return `https://pokeapi.co/api/v2/pokemon/${id}/`;
     };
 
-    // const pokemonName = (pokemonRequest) => {
-    //     return `https://pokeapi.co/api/v2/pokemon/${}/`
-    // }
 
     $(".reset").on("click", function(event) {
         digits = [];
@@ -142,12 +160,6 @@ $(document).ready(function () {
                     Swal.fire({
                         title: "Hey Pokémon Trainer!",
                         text: "That Pokemon doesn't exist.\nPlease enter a number between 1 and 807.",
-                        showClass: {
-                            popup: 'animate__animated animate__fadeInDown'
-                        },
-                        hideClass: {
-                            popup: 'animate__animated animate__fadeOutUp'
-                        }
                     })
                     // alert("That Pokemon doesn't exist. Please enter a number between 1 and 807.")
                 // handles error if 0 present befoe pokemon ID number
@@ -155,17 +167,10 @@ $(document).ready(function () {
                     Swal.fire({
                         title: "Hey Pokémon Trainer!",
                         text: 'It looks like you entered "0" before your number.\n\nPlease try again with a number that does not start with "0".',
-                        showClass: {
-                            popup: 'animate__animated animate__fadeInDown'
-                        },
-                        hideClass: {
-                            popup: 'animate__animated animate__fadeOutUp'
-                        }
                     })
                 }
                 });
-            // testing out the below "instructions" button !!!! *******
-        // END OF ENTER BUTTON INPUT
+                // END OF ENTER BUTTON INPUT
             });
             $('.instructions').on('click', function (event) {
                 Swal.fire({
@@ -185,8 +190,36 @@ $(document).ready(function () {
         
                 })
 
+
+                $('.themes').on('click', function (event) {
+                    Swal.fire({
+                        title: `Pewter City`,
+                        text: `words words words`,
+                        imageUrl: './assets/cerulean_city.png',
+                        imageHeight: 200,
+                        imageAlt: 'A tall image',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    })
+
+                })
+                // need to create swal alert --> ul --> li x 4 --> four imgs, four p tags? & four buttons
+                // add mute icon inside our alert incase user no longer wants to hear audio **  
+                // need to flex inside 
+                // click event listener will be on four buttons (classes per button)
+                // need to set up object of each town, title, image, p and audio file
+                // set object (maybe use this for example this.(city) has audio property) 
+                // next, the audio property will "play the audio file", or "show the image", etc
+
+                
+
+
 // https://stackoverflow.com/questions/6677035/jquery-scroll-to-element
-// mobile scroll --> NEED TO WORK ON FOR HOW TO MAKE THIS HAPPEN ONLY WHEN IN MOBILE
+
 
 function enableScroll(x) {
     $(".enter").click(function () {
@@ -210,19 +243,3 @@ enableScroll(tablet) // Call listener function at run time
 tablet.addListener(enableScroll) // Attach listener function on state changes 
 
 
-   
-            
-
-        // Swal.fire({
-        //     title: `Welcome to your Pokedex!`,
-        //     text: `To view a Pokemon's information, use the number pad 
-        //             to input its ID number and then click "enter." You can also press 
-        //             "clear" to reset your selection. Note: You must input a number 
-        //             between 1 – 807, and your number cannot start with 0.'`,
-        //     showClass: {
-        //         popup: 'animate__animated animate__fadeInDown'
-        //     },
-        //     hideClass: {
-        //         popup: 'animate__animated animate__fadeOutUp'
-        //     }
-        // })
