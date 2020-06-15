@@ -1,44 +1,16 @@
-// PSEUDOCODE
-// user inputs pokemon index #
-// gained access to API
-// from there, we need to find which method we will use for the user to access data pool
-//
-// pokemon index # used to pull iniformation from API and display inside pokedex viewport
-// click events for number pad allowing user to input pokemon id #
-// user sees number inputs in pokedex finder
-// click "enter" submit button
-// grabs pokemon information based on id # from number pad and finds pokemon with that id from API
-// store specific items from API response into variables for use putting onto page
-// displays: pokemon image, name, height, weight, type
+// create namespacing
 const pokedexApp = {};
+
+// create array to hold individual button presses
+pokedexApp.digits = [];
+
+// create variable to hold pokemon ID selected by user
 pokedexApp.pokemonId = 0;
-let digits = [];
-pokedexApp.themes = [
-    {
-        name: 'Cerulean City',
-        image: '../assets/cerulean_city.png',
-        description: '.',
-        audio: '../audio/cerulean_city_theme.mp3'
-    },
-    {
-        name: 'Vermillion City',
-        image: '../assets/vermillion_city.png',
-        description: '.',
-        audio: '../audio/vermillion_city_theme.mp3'
-    },
-    {
-        name: 'Pallet Town',
-        image: '../assets/pallet_town.png',
-        description: '.',
-        audio: '../audio/pallet_town_theme.mp3'
-    },
-    {
-        name: 'Pewter City',
-        image: '../assets/pewter_city.png',
-        description: '.',
-        audio: '../audio/pewter_city_theme.mp3'
-    },
-]; 
+
+// init function
+pokedexApp.init = function() {
+    
+}
 
 $(document).ready(function () {
     // buttons for number pad
@@ -75,13 +47,13 @@ $(document).ready(function () {
     const pushNumber = function (number) {
         console.log(number);
         // remove first digit if length already 3
-        if (digits.length === 3) {
-            digits.shift();
+        if (pokedexApp.digits.length === 3) {
+            pokedexApp.digits.shift();
         }
-        // add number to digits
-        digits.push(number);
+        // add number to pokedexApp.digits
+        pokedexApp.digits.push(number);
 
-        // move values in the digits divs to the left
+        // move values in the pokedexApp.digits divs to the left
         $('.digitLeft').text($('.digitCenter').text());
         $('.digitCenter').text($('.digitRight').text());
         $('.digitRight').text(number);
@@ -94,15 +66,15 @@ $(document).ready(function () {
 
 
     $(".reset").on("click", function(event) {
-        digits = [];
-        $('.digitsDisplay div').html('');
+        pokedexApp.digits = [];
+        $('.pokedexApp.digitsDisplay div').html('');
     });
 
     $(".enter").on("click", function (event) {
         // on next click on input clear out my returned pokemon array
         pokedexApp.pokemonStats = [];
         // build pokeUrl from pokemonRequqest function
-        pokedexApp.pokemonId = digits.join("");
+        pokedexApp.pokemonId = pokedexApp.digits.join("");
         pokedexApp.pokeUrl = pokemonRequest(pokedexApp.pokemonId);
         console.log(pokedexApp);
         // set the result of the ajax request to pokedexApp
@@ -148,8 +120,7 @@ $(document).ready(function () {
                 }
                 
 
-                });
-            })
+                })
             // throws error message if API request unsuccessful
             .fail((error) => {
                 // handles error if Pokemon ID number is too high
@@ -163,13 +134,14 @@ $(document).ready(function () {
                     })
                     // alert("That Pokemon doesn't exist. Please enter a number between 1 and 807.")
                 // handles error if 0 present befoe pokemon ID number
-                } else if ((digits[0] == 0) || (digits[0] == 0 && digits[1] == 0)) {
+                } else if ((pokedexApp.digits[0] == 0) || (pokedexApp.digits[0] == 0 && pokedexApp.digits[1] == 0)) {
                     Swal.fire({
                         title: "Hey Pokémon Trainer!",
                         text: 'It looks like you entered "0" before your number.\n\nPlease try again with a number that does not start with "0".',
                     })
                 }
-                });
+            })
+});
                 // END OF ENTER BUTTON INPUT
             });
             $('.instructions').on('click', function (event) {
