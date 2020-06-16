@@ -7,7 +7,7 @@ pokedexApp.digits = [];
 // create variable to hold pokemon ID selected by user
 pokedexApp.pokemonId = 0;
 
-// set aufio to false on page load
+// set audio to false on page load
 pokedexApp.audioClicked = false; 
 
 // turn audio on and off with button click
@@ -20,7 +20,7 @@ pokedexApp.volumeToggle = function() {
         pokedexApp.themeMusic.muted = !pokedexApp.themeMusic.muted;
     }
 
-    // set audio ovlume
+    // set audio volume
     pokedexApp.themeMusic.volume = 0.3;
     pokedexApp.themeMusic.paused = false;
 
@@ -32,6 +32,17 @@ pokedexApp.volumeToggle = function() {
         .toggleClass('fa-volume-up')
         .toggleClass('fa-volume-mute');
 })}
+
+// pikachu audio plays when user clicks on names in footer
+
+const pikachu = document.getElementById('pikachu');
+
+$(document).ready(function () {
+    $('.pikachu').click(function () {
+        pikachu.play();
+        return false;
+    });
+});
 
 
 // add number to digits array on button click

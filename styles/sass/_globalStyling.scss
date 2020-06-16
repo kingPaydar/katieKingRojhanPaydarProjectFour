@@ -1,5 +1,12 @@
 // general styles will go here
 
+html {
+  scroll-behavior: smooth;
+}
+
+.hide {
+  display:none; 
+}
 
 // styles for pokedex v 
 .flexContainer {
@@ -301,6 +308,7 @@ button.ok {
   justify-content: center;
 }
 
+
 //styles for the number pad ^
 
 // styles for pokedex ^ 
@@ -310,11 +318,53 @@ button.ok {
 footer {
   display:flex;
   justify-content: center;
-  padding: 2%; 
-  background-color: $mainColor;
-  height: 10vh; 
+  align-items: center;
+  padding: 2%;  
+  background-color: $mainColor; 
+  height: 20vh; 
     img {
       height: 20px;
       width: 20px; 
+       
     }
 }
+
+ul {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin-right: 5%;  
+}
+
+.alignment {
+  display: flex;
+  flex-direction: row;
+  margin: 5%; 
+}
+
+a {
+  @include fontSize(18);
+  text-decoration: none;
+  color: $black; 
+}
+
+nav {
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.center {
+  align-self: center;
+}
+
+p {
+  @include fontSize(16);
+  text-align: center;
+}
+

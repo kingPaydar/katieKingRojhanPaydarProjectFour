@@ -45,7 +45,7 @@
             right: 15px;
         }
     }
-
+    
 
 
 }
@@ -82,5 +82,30 @@
     .titleSpacing {
         padding: 0;
     }
+
+    footer {
+        // margin-top: 5%; 
+        border-top: 2px solid $accentColor;
+        background: none;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .footerImage {
+    background-image: url(../assets/pokemon_border_two.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 200px;
+        p {
+            font-size: 10px; 
+        }
+}
 
 }

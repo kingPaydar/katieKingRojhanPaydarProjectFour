@@ -10,7 +10,6 @@
     <title>Pokedex</title>
 </head>
 <body>
-
     <main>
         <h1>Personal Pokedex</h1>
         <section>
@@ -81,7 +80,7 @@
                 <!-- enter button -->
                 <div class="flexContainer">
                    <input id="mobileScroll" type="submit" class="enter" value="ENTER">
-                    <!-- MAKE THE CLEAR BUTTON CLEAR -->
+                    <!-- clear button -->
                     <input type="submit" class="reset" value="CLEAR">
                 </div>
                 </div>
@@ -89,19 +88,49 @@
             </div>
         </section>
     </main>
-    <footer>    
-        <img src="./assets/earth_badge.png" alt="">
-        <img src="./assets/pokemon.png" alt="Pokeball icon can be found at: https://www.flaticon.com/free-icon/pokeball_528101?term=pokeball&page=1&position=1">
-        <p>Gym Leader Katie</p>
-        <a href="https://www.linkedin.com/in/katielynnking/"><label class="sr-only">LinkedIn<i class="fab fa-linkedin-in"></i></label></a>
-        <a href="https://twitter.com/kingofkaties"><label class="sr-only"></label><i class="fab fa-twitter">Twitter</i></label></a>
-        <a href="https://github.com/kingofkaties"><label class="sr-only">Github<i class="fab fa-github"></i></label></a>
-        <a href="https://katieking.ca/"><label class="sr-only">Website<i class="fas fa-external-link-alt"></i></label></a>
-        <a href="https://medium.com/@kingofkaties"><label class="sr-only">Medium<i class="fab fa-medium-m"></i></label></a>
-        <img src="assets/cascade_badge.png" alt="">
-        <img src="./assets/pokemon.png"
-            alt="Pokeball icon can be found at: https://www.flaticon.com/free-icon/pokeball_528101?term=pokeball&page=1&position=1">
-        <p>Gym Leader Ro</p>
+    <footer class="footerImage"> 
+    <audio id="pikachu">
+        <source src="audio/Pikachu.mp3" type="audio/mpeg">
+    </audio>
+    <nav>
+    <p class="center">Pokedex 2020 Created By  </p>
+        <ul>
+            <img src="./assets/earth_badge.png" alt="Earth Pokemon Badge">
+            <a href="#" id="pikachu" class="pikachu"><p>Gym Leader Katie</p></a>
+            
+                <!-- Katie King LinkedIn -->
+                <div class="alignment">
+                    <li><a target="_blank" href="https://www.linkedin.com/in/katielynnking/"><label class="sr-only">LinkedIn</label><span class="fab fa-linkedin-in"></span></a></li>
+                    <!-- Katie King Twitter -->
+                    <li><a target="_blank" href="https://twitter.com/kingofkaties"><label class="sr-only">Twitter</label><span class="fab fa-twitter"></span></label></a></li>
+                    <!-- Katie King GitHub -->
+                    <li><a target="_blank" href="https://github.com/kingofkaties"><label class="sr-only">Github</label><span class="fab fa-github"></span></a></li>
+                    <!-- Katie King Website -->
+                    <li><a target="_blank" href="https://katieking.ca/"><label class="sr-only">Website</label><span class="fas fa-external-link-alt"></span></a></li>
+                    <!-- Katie King Medium Blog -->
+                    <li><a target="_blank" href="https://medium.com/@kingofkaties"><label class="sr-only">Medium</label><span class="fab fa-medium-m"></span></a></li>
+                </div>
+            </ul>
+        <ul>
+            <img src="assets/cascade_badge.png" alt="">
+            <a href="#" id="pikachu" class="pikachu">
+                <p>Gym Leader Ro</p>
+            </a>
+            <div class="alignment">
+                <!-- Rojhan Paydar LinkedIn -->
+            <li><a target="_blank" href="https://www.linkedin.com/in/rojhan-paydar-432856b4/"><label class="sr-only">LinkedIn</label><span class="fab fa-linkedin-in"></span></a></li>
+                <!-- Rojhan Paydar Twitter -->
+            <li><a target="_blank" href="https://twitter.com/rothecoder"><label class="sr-only">Twitter</label><span class="fab fa-twitter"></span></label></a></li>
+                <!-- Rojhan Paydar GitHub -->
+            <li><a target="_blank" href="https://github.com/rojhanpaydar"><label class="sr-only">Github</label><span class="fab fa-github"></span></a>
+            </li>
+            <!-- Rojhan Paydar Website -->
+            <li><a target="_blank" href="https://rothecoder.com/"><label class="sr-only">Website</label><span class="fas fa-external-link-alt"></span></a></li>
+                <!-- Rojhan Paydar Medium Blog -->
+            <li><a target="_blank" href="https://medium.com/@rojhanpaydar"><label class="sr-only">Medium</label><span class="fab fa-medium-m"></span></a></li>
+            </div>
+        </ul>
+        </nav>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
