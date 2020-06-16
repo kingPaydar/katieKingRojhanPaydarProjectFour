@@ -463,6 +463,7 @@ h2 {
 
 .pokedexInfo p {
   line-height: 30px;
+  text-align: inherit;
 }
 
 .hinge {

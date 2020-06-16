@@ -154,8 +154,8 @@ pokedexApp.enterClick = function () {
                 // add name, height, weight of selected pokemon to info display
                 $('.pokedexInfo').html (`
                     <p>Name: ${pokedexApp.pokemonStats[0].name}</p>
-                    <p>Height: ${pokedexApp.pokemonStats[0].height}</p>
-                    <p>Weight: ${pokedexApp.pokemonStats[0].weight}</p>
+                    <p>Height: ${pokedexApp.pokemonStats[0].height}m</p>
+                    <p>Weight: ${pokedexApp.pokemonStats[0].weight}kg</p>
                 `)
                 
                 // renders pokemon image to the site

@@ -156,6 +156,7 @@ h2 {
   @include fontSize (18);
     p {
       line-height: 30px; 
+      text-align: inherit;
     }
 }
 
